@@ -45,7 +45,7 @@ export default function ReposBox() {
         </select>
 
         {loading && <p>Loading my repositories...</p>}
-        {error && <p>Error: {error}</p>}
+        {error && <p style={{color:"red"}}>Error: {error}</p>}
         {sortedRepos.map(repo => (<div key={repo.id}>
             <p style={{ fontWeight: 'bold' }}>Title: {repo.name}</p>
             <p style={{ fontStyle: 'italic' }}>Main language: {repo.language}</p>
