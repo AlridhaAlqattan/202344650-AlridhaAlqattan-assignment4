@@ -1,0 +1,61 @@
+/* percentages are used for better displaying on phones */
+
+ul {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+h2 {
+    display: flex;
+    color: black;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: green;
+    background-color: lightgreen;
+    width: 95%;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.box {
+    text-align: center;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: gold;
+    padding: 10px;
+    background-color: lightblue;
+    width: 90%;
+    max-width: 700x;
+    box-shadow: 5px 5px 10px grey;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px grey;
+}
+
+
+
+#boxTitle:hover {
+    background-color: lightyellow;
+    transform: scale(1.05);
+
+}
