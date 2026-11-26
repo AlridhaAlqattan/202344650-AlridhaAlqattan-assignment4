@@ -11,7 +11,7 @@ function JokeBox() {
         setError(null);
         try {
 
-            const url = "https://official-joke-api.appspot.com/jokes/programming/random";
+            const url = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious&type=single";
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`Failed to fetch joke`);
@@ -19,12 +19,11 @@ function JokeBox() {
 
             const data = await response.json();
 
-            if (!data.length) {
+            if ( data.joke && !data.joke.length) {
                 throw new Error(`There are no jokes available`);
             }
 
-
-            setJoke(`${data[0].setup}, ${data[0].punchline}`);
+            setJoke(data.joke);
         }
         catch (error) {
             console.error('Error fetching the joke:', error);

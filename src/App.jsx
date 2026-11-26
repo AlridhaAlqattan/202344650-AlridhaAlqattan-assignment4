@@ -56,7 +56,7 @@ function App() {
                 project called Pseudo File System. The project was about creating a file system
                 using some concepts of data structures i learned. i used java and tree like structures.
               </p>
-              <a href="assets/file-system.webp" target="_blank"><img src="assets/file-system.webp" alt="File System"
+              <a href="/assets/file-system.webp" target="_blank"><img src="/assets/file-system.webp" alt="File System"
                 className="projImg" /></a>
             </div>
 
@@ -68,7 +68,7 @@ function App() {
                 which enables KFUPM students to report problems in their buldings. Whether the
                 problem is related to electricity, water, or any other issue.
               </p>
-              <a href="assets/webdev.webp" target="_blank"><img src="assets/webdev.webp" alt="Web Development"
+              <a href="/assets/webdev.webp" target="_blank"><img src="/assets/webdev.webp" alt="Web Development"
                 className="projImg" /></a>
             </div>
           </>} /></section>

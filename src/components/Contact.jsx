@@ -26,6 +26,11 @@ function Contact() {
             setError('Email must contain "@" and end with ".com".');
             return;
         }
+        
+        if (email.slice(email.indexOf('@')+1, email.indexOf(".")) === '') {
+            setError('Email must contain a domain name between @ and .com');
+            return;
+        }
 
         setFormData({ name, email, message });
         alert('Your message has been sent successfully!');
