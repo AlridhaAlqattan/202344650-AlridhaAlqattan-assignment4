@@ -61,12 +61,11 @@ The layout uses flexible widths and mobile media rules to support desktop, table
 
 ## Performance
 
-The project uses compressed WebP images, separate React components, and Vite's production build process. The production build is generated with `npm run build`.
+The project uses compressed webp images, separate React components, and unused code was removed.
 
 ## Local Execution
 
 1. Install Node.js and npm.
 2. Run `npm install` in the project directory.
 3. Run `npm run dev` to start the development server.
-4. Run `npm run build` to create the production build.
-5. Use `npm run preview` to preview the production build locally.
+
