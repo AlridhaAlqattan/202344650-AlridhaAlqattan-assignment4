@@ -1,177 +1,72 @@
 # Technical Documentation
 
-## Assignment Overview
+## Project Overview
 
-The Personal Portfolio Website is a React-based web application designed to present personal information, projects, and contact details through a structured user interface.
-
-The application uses separate React components to organize different sections and improve code readability and maintainability.
-
-Compared to Assignment 2, additional functionality has been introduced, including GitHub repository retrieval, improved data handling, and performance optimizations.
+This project is a responsive personal portfolio web application built with React and Vite. It organizes personal information, academic projects, GitHub repositories, contact functionality, and programming content into reusable interactive sections.
 
 ## Technologies and Tools
 
 | Technology | Purpose |
 |---|---|
-| React | Building the user interface with components |
-| JavaScript | Implementing application logic and interactions |
-| HTML/JSX | Defining the page structure |
-| CSS | Styling and layout |
-| GitHub REST API | Retrieving GitHub repository information |
-| Official Joke API | Retrieving programming jokes |
-| Vite | Running the development server and building the application |
+| React | Building reusable user-interface components |
+| JavaScript | Application logic, state management, and API requests |
+| HTML/JSX | Page structure and accessible content |
+| CSS | Layout, responsive design, colors, spacing, and transitions |
+| Vite | Development server and production build tool |
+| GitHub REST API | Retrieving public repository information |
+| JokeAPI | Retrieving programming jokes |
+| Vercel | Hosting the deployed application |
 
 ## Application Structure
 
-The application uses React components to separate different responsibilities.
+### `App.jsx`
 
-### App.jsx
+The main application component imports the portfolio sections, assets, and reusable components. It contains the navigation, About, Projects, Repositories, Contact, and Programming Joke sections.
 
-`App.jsx` serves as the main application component. It organizes the portfolio's main sections and combines the components needed to display the website.
+### `Box.jsx`
 
-The interface includes navigation and sections for About, Projects, Contact, GitHub Repositories, and Programming Jokes.
+`Box` is a reusable collapsible component. It receives a title and content through props and uses React state to show or hide each section.
 
-It also imports the required components and assets used throughout the website.
+### `TimeDate.jsx`
 
-### TimeDate.jsx
+This component displays the current date and time. A timed effect updates the displayed values every second and clears the interval when the component is removed.
 
-`TimeDate.jsx` is a separate component responsible for displaying the current date and time.
+### `Contact.jsx`
 
-React's `useState` hook stores the displayed date and time, while `useEffect` manages the updating process.
+This component displays the contact form and validates the required name, email, and message fields. It shows an error message when input is incomplete or invalid and displays confirmation feedback after valid submission. The form currently provides client-side demonstration and validation feedback; it does not connect to an email server or permanently store messages.
 
-### Contact.jsx
+### `ReposBox.jsx`
 
-`Contact.jsx` is a separate component responsible for displaying the Contact box and handling form validation.
+This component requests public repositories from the GitHub REST API. It displays repository names, main languages, creation dates, and links. Loading and error states are handled, and users can sort the results by newest or oldest creation date.
 
-React's `useState` is used to manage error messages and user input. It also handles clearing the information and displaying a confirmation message when the form is submitted correctly.
+### `JokeBox.jsx`
 
-### JokeBox.jsx
+This component requests a single programming joke from JokeAPI. It manages the joke content, loading state, and error state. Users can request another joke after the initial request.
 
-`JokeBox.jsx` is a separate component responsible for displaying programming jokes fetched from an external API.
+## Asset Handling
 
-The component uses error handling to catch problems when fetching data from the API. Additionally, it uses a loading state to show a loading message while the joke is being retrieved.
+The KFUPM logo is imported from `src/assets` so Vite can process it during the build. Project images are stored in `public/assets` and are referenced through public asset paths. This ensures that the images are available in the deployed Vercel application.
 
-React's `useState` and `useEffect` are used to display the fetched joke and manage the process of retrieving another joke when the user presses the `Get Another Joke` button.
+## State Management
 
-### ReposBox.jsx
+React `useState` manages date and time values, section visibility, contact-form feedback, repository data and sorting, and joke content with its loading and error states. React `useEffect` is used for timed updates and for loading API data when the relevant components are mounted.
 
-`ReposBox.jsx` is a separate component responsible for retrieving and displaying my GitHub repositories.
+## Error and Loading Handling
 
-It uses the GitHub REST API to retrieve public repositories from my GitHub account.
+The API components display loading feedback while requests are in progress. Failed requests are caught and shown as readable messages instead of breaking the entire page. The rest of the portfolio remains usable when an external API is unavailable.
 
-The component uses `useEffect` to fetch the repositories when the component is mounted. The retrieved data is stored using `useState`.
+## Responsive Design and Accessibility
 
-The displayed information includes:
-- Repository name.
-- Main programming language.
-- Repository creation date.
-- A link to view the repository on GitHub.
+The layout uses flexible widths and mobile media rules to support desktop, tablet, and phone screens. The website was tested using browser device emulation at mobile and desktop sizes. Images include alternative text, form controls have labels, and interactive controls can be reached using keyboard navigation.
 
-The component also uses loading and error states to inform the user about the status of the API request.
+## Performance
 
-### Box.jsx
-The `Box` component is a reusable component used to display content inside collapsible sections. It receives a `title` and `content` through props and displays the title as a clickable heading.
+The project uses compressed WebP images, separate React components, and Vite's production build process. The production build is generated with `npm run build`.
 
-It uses React's `useState` hook to manage the visibility of the content. When the user clicks the title, the visibility state is toggled, allowing the content to be shown or hidden without removing the section title. The component uses `Box.css` for its styling.
+## Local Execution
 
-This component improves the user experience by allowing users to collapse sections they do not currently need, keeping the page more organized.
-
-### Styling
-
-CSS files define the visual appearance, spacing, colors, layout, and transitions of the website.
-
-Common CSS classes are used to maintain consistent styling across different sections and reduce repeated styling rules.
-
-Images are also optimized by compressing and resizing them to reduce their file sizes.
-
-## Main Features
-
-### Navigation
-
-The navigation interface allows visitors to move between the main sections of the portfolio.
-
-### About Section
-
-Presents personal background and relevant information.
-
-### Projects Section
-
-Displays selected projects and their descriptions.
-
-### Contact Section
-
-Provides a way for visitors to enter contact information and a message. It includes validation functionality and requires all fields to be filled.
-
-When information is submitted correctly, a confirmation message is shown.
-
-### Programming Joke Section
-
-Displays a programming joke fetched from an external API and provides the user with the choice to retrieve another joke using a button.
-
-A loading message is displayed while the joke is being retrieved, and an error message is shown if the request fails.
-
-### GitHub Repositories Section
-
-Retrieves public repositories from my GitHub account using the GitHub REST API.
-
-Repository information is displayed dynamically, including the repository name, main programming language, creation date, and a link to the repository.
-
-Loading and error messages are also implemented to handle the different states of the API request.
-
-### Date and Time
-
-Displays current date and time information through the `TimeDate` component.
-
-### State Management
-
-React's `useState` and `useEffect` hooks are used throughout the application to manage dynamic information and component behavior.
-
-They are used to manage date and time updates, form inputs, API responses, loading states, and error messages.
-
-## API Integration
-
-The application uses two external APIs to retrieve dynamic information.
-
-### GitHub REST API
-
-The GitHub API is used to retrieve public repositories belonging to my GitHub account.
-
-The retrieved JSON data is processed and displayed through the `ReposBox` component.
-
-### Official Joke API
-
-The Official Joke API is used to retrieve programming jokes, which are displayed through the `JokeBox` component.
-
-Both API integrations include loading and error handling to provide feedback to the user.
-
-## Performance Optimization
-
-Several improvements are applied to make the application load faster and run more efficiently.
-
-These include:
-
-- Compressing and resizing large images to reduce loading times.
-- Removing unused code, imports, and files.
-- Reusing CSS classes to avoid unnecessary repetition.
-
-Google Chrome Lighthouse is used to evaluate the website's performance and identify potential improvements.
-
-## Installation and Execution
-
-### Prerequisites
-
-- Node.js
-- npm
-
-### Steps
-
-1. Clone the project repository.
-2. Open a terminal in the project directory.
-3. Install the dependencies:
-
-   npm install
-
-4. Start the development server:
-
-   npm run dev
-
-5. Open the local address printed in the terminal.
+1. Install Node.js and npm.
+2. Run `npm install` in the project directory.
+3. Run `npm run dev` to start the development server.
+4. Run `npm run build` to create the production build.
+5. Use `npm run preview` to preview the production build locally.

@@ -1,149 +1,98 @@
-# Alridha Alqattan - Assignment 3
+# Alridha Alqattan – Assignment 4
 
-# Personal Portfolio Website
+## Personal Portfolio Website
 
-## Project Description
+This project is a responsive personal portfolio website built with React, JavaScript, HTML, CSS, and Vite. It presents personal information, selected academic projects, GitHub repositories, contact information, and interactive programming content.
 
-This project is an upgraded version of my personal portfolio website, developed using React, JavaScript, HTML, and CSS. It presents my background, projects, and contact information in a simple and organized layout.
+## Live Website
 
-The website includes a navigation bar, an About section, a Projects section, and a Contact section. It also includes components that display the current date and time, programming jokes fetched from an external API, and my GitHub repositories.
-
-Compared to Assignment 2, this version introduces additional functionality, including integration with the GitHub API, more advanced data handling, interactive elements, and performance improvements.
+**Vercel URL:** `[ADD YOUR FINAL VERCEL URL HERE]`
 
 ## Features
 
-- **Navigation:** Links to the main sections of the website.
-- **About:** Introduces me and provides information about my background.
-- **Projects:** Displays selected projects and relevant details.
-- **Contact:** Provides a form for visitors to enter their contact information and message, with input validation.
-- **Programming Joke:** Displays programming jokes fetched from an external API.
-- **GitHub Repositories:** Fetches and displays my public GitHub repositories using the GitHub REST API, including their names, main programming languages, creation dates, and links.
-- **Live Date and Time:** Displays the current date and time using a separate React component.
-- **Interactive Sections:** Allows visitors to interact with website elements and show or hide content.
-- **Responsive Design:** Designed to provide a usable experience across different screen sizes.
-- **Loading and Error Handling:** Displays loading messages while retrieving API data and error messages if a request fails.
+- Navigation links to the main portfolio sections.
+- About section with personal and academic information.
+- Projects section with project descriptions and images.
+- Contact form with required-field and email validation.
+- GitHub repository section using the GitHub REST API.
+- Sorting repositories by newest or oldest creation date.
+- Programming joke section using JokeAPI.
+- Loading and error messages for API requests.
+- Live date and time display.
+- Collapsible content sections.
+- Responsive layout for desktop, tablet, and mobile screens.
 
 ## Technologies Used
 
 - React
 - JavaScript
-- HTML
+- HTML/JSX
 - CSS
-- GitHub REST API
-- Official Joke API (Note: the API was down when this assignment was completed)
 - Vite
+- GitHub REST API
+- JokeAPI
 
-## Setup Instructions
+## Running the Project Locally
 
 ### Prerequisites
 
-Install Node.js and npm before running the project.
+- Node.js
+- npm
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository.
+2. Open a terminal in the project directory.
+3. Install the dependencies with `npm install`.
+4. Start the development server with `npm run dev`.
+5. Open the local URL displayed in the terminal.
 
-   `git clone https://github.com/AlridhaAlqattan/202344650-AlridhaAlqattan-assignment3`
+### Production Build
 
-2. Navigate to the project directory:
-
-   `cd 202344650-AlridhaAlqattan-assignment3`
-
-3. Install the dependencies:
-
-   `npm install`
-
-4. Start the development server:
-
-   `npm run dev`
-
-5. Open the local URL displayed in the terminal in your browser.
+Run `npm run build` to create the production build in the `dist/` directory. Run `npm run preview` to preview the production build locally.
 
 ## Project Structure
 
 ```text
-project/
-├── docs/
-│   ├── ai-usage-report.md
-│   └── technical-documentation.md
+202344650-AlridhaAlqattan-assignment4/
+├── public/assets/
+│   ├── file-system.webp
+│   └── webdev.webp
 ├── src/
-│   ├── assets/
-│   │   ├── file-system.webp
-│   │   ├── kfupm-logo-300x284.webp
-│   │   └── webdev.webp
+│   ├── assets/kfupm-logo-300x284.webp
 │   ├── components/
+│   │   ├── Box.jsx
+│   │   ├── Box.css
 │   │   ├── Contact.jsx
 │   │   ├── JokeBox.jsx
 │   │   ├── ReposBox.jsx
-│   │   ├── Box.jsx
-│   │   ├── Box.css
 │   │   └── TimeDate.jsx
-│   ├── App.css
 │   ├── App.jsx
+│   ├── App.css
 │   ├── index.css
 │   └── main.jsx
-├── .gitignore
+├── docs/
 ├── index.html
 ├── package.json
 ├── package-lock.json
-├── README.md
 └── vite.config.js
 ```
 
-The project structure above is illustrative. Some files are not shown for simplicity.
-
 ## API Integration
 
-The website uses external APIs to retrieve and display dynamic information.
+- **GitHub REST API:** Retrieves public repositories for the portfolio owner and displays their names, languages, creation dates, and links.
+- **JokeAPI:** Retrieves single programming jokes. The interface shows loading feedback while a request is in progress and an error message if the request fails.
 
-- **GitHub REST API:** Retrieves my public GitHub repositories and displays information about them, including their names, programming languages, creation dates, and repository links.
-- **Official Joke API:** Retrieves programming jokes and displays them on the website.
+The application handles unsuccessful requests without preventing the rest of the website from loading.
 
-Both API integrations include loading and error messages to provide feedback to visitors when requests are being processed or fail.
+## Testing
 
-## Performance
-
-Performance improvements are applied to make the website load faster and run more efficiently.
-
-These include:
-- Compressing and resizing images to reduce their file sizes.
-- Removing unused code, imports, and files.
-- Reusing CSS classes and React components to avoid unnecessary repetition.
-
-The website is also tested using Google Chrome Lighthouse to evaluate its performance.
+The website was tested for desktop and mobile layouts, navigation, collapsible sections, contact-form validation, repository loading and sorting, programming-joke loading and retry behavior, API loading and error states, image display on Vercel, and successful production builds.
 
 ## AI Usage
 
-AI tools were used as development assistance for understanding React concepts, troubleshooting code, implementing features, and improving project documentation. AI-generated suggestions were reviewed, modified, and tested as needed.
+AI tools were used as development and learning assistance for React explanations, debugging, API integration, testing guidance, and documentation organization. Suggestions were reviewed and tested before being used. Detailed information is available in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
 
-Detailed information about AI usage, including the tools used, their purposes, and modifications made, is provided in `docs/ai-usage-report.md`.
+## Academic Integrity
 
-## Assignment 3 Requirements Met
-
-### API Integration
-- GitHub repositories are retrieved and displayed using the GitHub REST API.
-- Programming jokes are retrieved from an external API.
-- Loading and error messages are implemented for API requests.
-
-### Complex Logic
-- Contact form validation checks user inputs before submission.
-- API responses are handled and displayed dynamically.
-- Repository information is processed and displayed.
-
-### State Management
-- React state is used to manage dynamic content.
-- Loading and error states are managed when retrieving API data.
-- Interactive website elements respond to user actions.
-- Boxes are hideable or showable by clicking on the title of each section
-
-### Performance
-- Images are compressed and resized to reduce loading times.
-- Unused code is removed.
-- CSS and React components are organized to reduce repetition.
-- Performance is evaluated using Lighthouse.
-
-### Code Quality
-- Components are organized into separate files.
-- Code is properly structured and indented.
-- Unnecessary code is removed.
-
+AI assistance was reviewed, adapted, and tested by the student. The student is responsible for understanding and explaining the submitted implementation. Complete AI conversations and intermediate artifacts must be submitted separately as required by the course instructions and should not be committed to this repository.

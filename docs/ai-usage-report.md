@@ -6,7 +6,7 @@ AI tools were used as supplementary resources during the development of this per
 
 ## AI Tools Used
 
-**Tool: ChatGPT (GPT-6)**
+**Tool: ChatGPT**
 
 ChatGPT was used to ask questions about React components, JavaScript functionality, API integration, troubleshooting, and documentation. It served as a learning and problem-solving aid rather than a replacement for understanding the code.
 
@@ -26,7 +26,7 @@ Questions were asked about React's `useState` and `useEffect` hooks, particularl
 
 ### API Integration
 
-AI assistance was used to understand how external APIs work, how to retrieve GitHub repositories, and how to handle API responses, loading states, and errors.
+AI assistance was used to understand how external APIs work, how to retrieve GitHub repositories, how to use JokeAPI, and how to handle API responses, loading states, and errors.
 
 ### Debugging and Problem-Solving
 
@@ -70,8 +70,9 @@ The development process also emphasized the importance of reviewing suggested so
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |---|---|---|---|---|---|
-| C01 | ChatGPT (GPT-6) | 20/11/2026 | Understanding GitHub API integration, React functionality, and documentation improvements. | README.md, technical-documentation.md, ReposBox.jsx,Box.jsx,Box.css,App.jsx | Reviewed explanations and suggestions, adapted relevant information to the project, and checked the implementation. |
+| C01 | ChatGPT | 20/11/2026 | Understanding GitHub API integration, React functionality, and documentation improvements. | README.md, Technical-Documentation.md, ReposBox.jsx, Box.jsx, Box.css, App.jsx | Reviewed explanations and suggestions, adapted relevant information to the project, and checked the implementation. |
 | A01 | GitHub Copilot (1.0.115-1) | 20/11/2026 | Code completion and suggestions for repetitive code and function structures. | Box.jsx,Box.css,ReposBox.jsx,App.jsx | Reviewed and adapted generated suggestions, then tested the resulting functionality. |
+| C02 | ChatGPT | 26/11/2026 | Reviewing the final website and updating project documentation to match the completed React/Vite application. | README.md, Technical-Documentation.md, Academic-Integrity-Report.md, ai-usage-report.md | Reviewed the final project files, corrected outdated Assignment 2/3 references, documented the deployed asset structure and JokeAPI integration, and identified information that must be verified by the student. |
 
 
 ## Declaration
@@ -83,4 +84,4 @@ The development process also emphasized the importance of reviewing suggested so
 
 **Student ID:** 202344650
 
-**Date:** 20/11/2026
+**Date:** 26/11/2026
