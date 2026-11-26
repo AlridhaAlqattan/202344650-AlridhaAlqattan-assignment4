@@ -6,7 +6,7 @@ This project is a responsive personal portfolio website built with React, JavaSc
 
 ## Live Website
 
-**Vercel URL:** `[ADD YOUR FINAL VERCEL URL HERE]`
+**Vercel URL:** `https://202344650-alridha-alqattan-assignment4-r5qsoz16h-my-team-a70e.vercel.app/`
 
 ## Features
 
