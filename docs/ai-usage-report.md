@@ -70,9 +70,7 @@ The development process also emphasized the importance of reviewing suggested so
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |---|---|---|---|---|---|
-| C01 | ChatGPT | 20/11/2026 | Understanding GitHub API integration, React functionality, and documentation improvements. | README.md, Technical-Documentation.md, ReposBox.jsx, Box.jsx, Box.css, App.jsx | Reviewed explanations and suggestions, adapted relevant information to the project, and checked the implementation. |
-| A01 | GitHub Copilot (1.0.115-1) | 20/11/2026 | Code completion and suggestions for repetitive code and function structures. | Box.jsx,Box.css,ReposBox.jsx,App.jsx | Reviewed and adapted generated suggestions, then tested the resulting functionality. |
-| C02 | ChatGPT | 26/11/2026 | Reviewing the final website and updating project documentation to match the completed React/Vite application. | README.md, Technical-Documentation.md, Academic-Integrity-Report.md, ai-usage-report.md | Reviewed the final project files, corrected outdated Assignment 2/3 references, documented the deployed asset structure and JokeAPI integration, and identified information that must be verified by the student. |
+| C01 | ChatGPT (gpt-5-6) | 26/11/2026 | Reviewing the final website and updating project documentation to match the completed React/Vite application. | README.md, Technical-Documentation.md, Academic-Integrity-Report.md, ai-usage-report.md, App.jsx,JokeBox.jsx | Reviewed the final project files, corrected outdated Assignment 2/3 references, documented the deployed asset structure and JokeAPI integration, and identified information that must be verified by the student. And changed image location and updated API for jokes |
 
 
 ## Declaration
